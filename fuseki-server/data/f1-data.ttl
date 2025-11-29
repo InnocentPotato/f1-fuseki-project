@@ -1,0 +1,77 @@
+@prefix f1: <http://f1.example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Drivers
+f1:LewisHamilton a f1:Driver ;
+    rdfs:label "Lewis Hamilton" ;
+    f1:firstName "Lewis" ;
+    f1:lastName "Hamilton" ;
+    f1:nationality "British" ;
+    f1:driverNumber "44" ;
+    f1:team f1:Mercedes ;
+    f1:worldChampionships "7" ;
+    f1:active "true" ;
+    f1:debutYear "2007" .
+
+f1:MaxVerstappen a f1:Driver ;
+    rdfs:label "Max Verstappen" ;
+    f1:firstName "Max" ;
+    f1:lastName "Verstappen" ;
+    f1:nationality "Dutch" ;
+    f1:driverNumber "1" ;
+    f1:team f1:RedBull ;
+    f1:worldChampionships "3" ;
+    f1:active "true" ;
+    f1:debutYear "2015" .
+
+f1:CharlesLeclerc a f1:Driver ;
+    rdfs:label "Charles Leclerc" ;
+    f1:firstName "Charles" ;
+    f1:lastName "Leclerc" ;
+    f1:nationality "Monegasque" ;
+    f1:driverNumber "16" ;
+    f1:team f1:Ferrari ;
+    f1:worldChampionships "0" ;
+    f1:active "true" ;
+    f1:debutYear "2018" .
+
+f1:LandoNorris a f1:Driver ;
+    rdfs:label "Lando Norris" ;
+    f1:firstName "Lando" ;
+    f1:lastName "Norris" ;
+    f1:nationality "British" ;
+    f1:driverNumber "4" ;
+    f1:team f1:McLaren ;
+    f1:worldChampionships "0" ;
+    f1:active "true" ;
+    f1:debutYear "2019" .
+
+# Teams
+f1:Mercedes a f1:Team ;
+    rdfs:label "Mercedes-AMG Petronas" ;
+    f1:base "Brackley, United Kingdom" ;
+    f1:teamPrincipal "Toto Wolff" ;
+    f1:championships "8" ;
+    f1:engineManufacturer "Mercedes" .
+
+f1:RedBull a f1:Team ;
+    rdfs:label "Red Bull Racing" ;
+    f1:base "Milton Keynes, United Kingdom" ;
+    f1:teamPrincipal "Christian Horner" ;
+    f1:championships "6" ;
+    f1:engineManufacturer "Honda RBPT" .
+
+f1:Ferrari a f1:Team ;
+    rdfs:label "Scuderia Ferrari" ;
+    f1:base "Maranello, Italy" ;
+    f1:teamPrincipal "Frédéric Vasseur" ;
+    f1:championships "16" ;
+    f1:engineManufacturer "Ferrari" .
+
+f1:McLaren a f1:Team ;
+    rdfs:label "McLaren F1 Team" ;
+    f1:base "Woking, United Kingdom" ;
+    f1:teamPrincipal "Andrea Stella" ;
+    f1:championships "8" ;
+    f1:engineManufacturer "Mercedes" .
