@@ -1,26 +1,18 @@
-@prefix fuseki:  <http://jena.apache.org/fuseki#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix :        <http://base/#> .
 @prefix tdb2:    <http://jena.apache.org/2016/tdb#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ja:      <http://jena.apache.org/ARQ/property#> .
-@prefix :        <#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
 
-## F1 Racing Dataset
 :service_f1  a                   fuseki:Service ;
     rdfs:label                   "F1 Racing Dataset" ;
     fuseki:name                  "f1" ;
-    fuseki:endpoint [ 
-        fuseki:operation fuseki:query ; 
-        fuseki:name "sparql" 
-    ] ;
-    fuseki:endpoint [ 
-        fuseki:operation fuseki:update ; 
-        fuseki:name "update" 
-    ] ;
-    fuseki:endpoint [ 
-        fuseki:operation fuseki:upload ; 
-        fuseki:name "upload" 
-    ] ;
+    fuseki:serviceQuery          "sparql" ;
+    fuseki:serviceReadGraphStore "get" ;
+    fuseki:serviceReadWriteGraphStore "data" ;
+    fuseki:serviceUpdate         "update" ;
+    fuseki:serviceUpload         "upload" ;
     fuseki:dataset               :dataset_f1 .
 
 :dataset_f1 a tdb2:DatasetTDB2 ;
